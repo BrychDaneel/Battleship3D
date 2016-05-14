@@ -8,7 +8,7 @@ namespace BattleShipUDP{
 class UDPServer
 {
 public:
-  UDPServer(void (*_onGet)(const char* buffer,const size_t size,const string ip,const unsigned short port), short port);
+  UDPServer(void (*_onGet)(const char* buffer,const size_t size,const string ip,const unsigned short port),unsigned short port);
 
     void send(const string ip, const unsigned short port, const char* buf,const size_t length);
     void send(const string ip, const unsigned short port, const char* buf);

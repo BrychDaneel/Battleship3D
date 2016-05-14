@@ -1,0 +1,74 @@
+material panel/red
+{
+    // first, preferred technique
+    technique
+    {
+        // first pass
+        pass
+        {
+            ambient 0.5 0 0 0.3
+            diffuse 1.0 0 0 0.3
+            scene_blend alpha_blend
+            depth_write off
+            cull_software none
+            cull_hardware none
+        }
+    }	
+} 
+
+
+material panel/green
+{
+    // first, preferred technique
+    technique
+    {
+        // first pass
+        pass
+        {
+            ambient 0 0.5 0 0.3
+            diffuse 0 1.0 0 0.3
+            scene_blend alpha_blend
+            depth_write off
+            cull_software none
+            cull_hardware none
+        }
+    }	
+} 
+
+material panel/gray
+{
+    // first, preferred technique
+    technique
+    {
+        // first pass
+        pass
+        {
+            ambient 0.3 0.3 0.3 0.3
+            diffuse 0.5 0.5 0.5 0.3
+            scene_blend alpha_blend
+            depth_write off
+            cull_software none
+            cull_hardware none
+        }
+    }	
+} 
+
+material panel/blue
+{
+    // first, preferred technique
+    technique
+    {
+        // first pass
+        pass
+        {
+            ambient 0 0 0.5 0.3
+            diffuse 0 0 1 0.3
+            scene_blend alpha_blend
+            depth_write off
+            cull_software none
+            cull_hardware none
+        }
+    }	
+} 
+
+

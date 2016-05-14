@@ -1,0 +1,61 @@
+// Example particle systems
+
+// smoke
+particle_system Examples/Smoke
+{
+        material Examples/Smoke
+
+	particle_width  	15
+	particle_height 	15
+	quota           	1000
+	billboard_type point
+        
+        color 1 0 0 1
+        
+	emitter Box
+        {
+            height 50
+            width 50
+            depth 20
+            
+            emission_rate 100
+            direction 0 1 0
+            velocity 5
+        }
+    
+    affector ColourFader
+    {
+        red +0.9
+        alpha -0.3
+    }
+}
+
+
+particle_system Examples/Smoke2
+{
+        material Examples/Smoke
+
+	particle_width  	15
+	particle_height 	15
+	quota           	1000
+	billboard_type point
+        
+	emitter Box
+        {
+            height 50
+            width 50
+            depth 20
+            
+            emission_rate 100
+            direction 0 1 0
+            velocity 5
+        }
+    
+    affector ColourFader
+    {
+        red +0.3
+        green +0.3
+        blue +0.3
+        alpha -0.3
+    }
+}

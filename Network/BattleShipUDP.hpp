@@ -1,5 +1,4 @@
 #pragma once
-#include "baseUDP.hpp"
 #include <string>
 #include <vector>
 
@@ -46,8 +45,8 @@ void AddFavorite(const string ip, const unsigned short port);
 void AddFavorite(const string ip);
 void DelFavorite(const string ip, const unsigned short port);
 void DelFavorite(const string ip);
-
 void ClearFavorites();
+
 void SetBattle(const bool battle[10][10]);
 void Attack(const unsigned char x,const unsigned char y);
 

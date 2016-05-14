@@ -3,7 +3,6 @@
 #include <boost/asio.hpp>
 #include <thread>
 #include <mutex>
-#include <string>
 
 using std::string;
 using std::thread;
@@ -18,7 +17,7 @@ static void startServ(){
 }
 
 
-  UDPServer::UDPServer(void (*_onGet)(const char* buffer,const size_t size,const string ip,const unsigned short port), short port)
+  UDPServer::UDPServer(void (*_onGet)(const char* buffer,const size_t size,const string ip,const unsigned short port),unsigned short port)
     : socket_(io_service, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), port))
   {
     onGet=_onGet;
@@ -87,10 +86,10 @@ void UDPServer::send(const unsigned short port, const string message){
             //do_send(bytes_recvd);
             data_[bytes_recvd]=0;
             if (onGet){
-                mutex m;
-                m.lock();
+           // mutex m;
+           // m.lock();
                 (*onGet)(data_,bytes_recvd,sender_endpoint_.address().to_string(),sender_endpoint_.port());
-                m.unlock();
+        //  m.unlock();
 
             }
           }
