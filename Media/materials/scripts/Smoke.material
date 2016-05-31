@@ -1,4 +1,4 @@
-material Examples/Smoke
+material smoke_y
 {
     // first, preferred technique
     technique
@@ -12,7 +12,29 @@ material Examples/Smoke
             diffuse vertexcolor
             texture_unit
             {
-                texture smoke.png
+                texture smoke_y.png
+                tex_address_mode clamp
+            }
+        }
+    }	
+} 
+
+
+material smoke_w
+{
+    // first, preferred technique
+    technique
+    {
+        // first pass
+        pass
+        {
+            lighting off
+            scene_blend alpha_blend
+            depth_write off
+            diffuse vertexcolor
+            texture_unit
+            {
+                texture smoke_w.png
                 tex_address_mode clamp
             }
         }

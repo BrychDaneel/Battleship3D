@@ -1,4 +1,8 @@
-#include "Graphics/Application.h"
+#include "Game/options.hpp"
+#include "Network/BattleShipUDP.hpp"
+#include "Graphics/Ogre.hpp"
+#include "Game/Core.hpp"
+
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 #define WIN32_LEAN_AND_MEAN
@@ -8,12 +12,12 @@ INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT )
 int main(int argc, char **argv)
 #endif
 {
-    // Create application object
-    Application app;
+    BattleShipOptions::InitOptions();
+    BattleShipUDP::initUdpProtocol(onFoundServer,onConnect,onConnected,onDisConnect,onInvalid,onRefuse,onSet,onAttack,onChatIn);
 
     try
     {
-        app.go();
+        OgreStart();
     }
     catch( std::exception & e )
     {

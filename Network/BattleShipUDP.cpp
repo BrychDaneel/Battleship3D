@@ -63,7 +63,7 @@ string ServerName;
 bool wantConnect=false,connected=false, wantQuick=false;
 string MyPass;
 
-const int timeOut=500, maxRetry=3;
+const int timeOut=500, pingTime=5000, maxRetry=3;
 const unsigned short standartPort=15565;
 
 int retry=0;
@@ -314,10 +314,17 @@ void Send(const string s){
         SendNext();
 }
 
+int lastping=0;
 void TimeOutTime(){
+        if (connected && clock()-lastping>pingTime)
+            Send("ping");
+
+
         if (reqvestQueue.size()>0 && clock()-sendtime>timeOut){
             retry++;
             if (retry>=maxRetry){
+                while (reqvestQueue.size())
+                    reqvestQueue.pop();
                 packegeID++;
                 ClearConnection();
                 (_onRefuse)();

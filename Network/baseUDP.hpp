@@ -1,12 +1,16 @@
 #pragma once
 #include <boost/asio.hpp>
 #include <string>
-
+#include <mutex>
 using std::string;
 
 namespace BattleShipUDP{
+
+extern std::mutex Mutex;
+
 class UDPServer
 {
+
 public:
   UDPServer(void (*_onGet)(const char* buffer,const size_t size,const string ip,const unsigned short port),unsigned short port);
 

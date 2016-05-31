@@ -14,6 +14,7 @@ extern unsigned short MasterPort;
 extern string Page_List, Page_Add, Page_Connect, Page_Disconnect, \
     Page_Action, Page_Message;
 
+extern string OgreResourcesCfg, OgrePluginsCfg;
 
     void InitOptions();
 }

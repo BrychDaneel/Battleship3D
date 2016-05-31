@@ -15,13 +15,6 @@
 					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
-				<Linker>
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
-					<Add library="OgreOverlay" />
-					<Add library="pthread" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="./Battleships3D" prefix_auto="1" extension_auto="1" />
@@ -33,30 +26,39 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-pthread" />
 			<Add option="-Wall" />
 			<Add option="`pkg-config --cflags OGRE`" />
 			<Add option="-fexceptions" />
 			<Add directory="/usr/include/OIS" />
-			<Add directory="/usr/local/include/OGRE/Overlay" />
+			<Add directory="/home/daneel/cegui-0.8.7/cegui/include" />
 		</Compiler>
 		<Linker>
 			<Add option="`pkg-config --libs OGRE`" />
 			<Add library="GL" />
+			<Add library="OgreMain" />
+			<Add library="OIS" />
+			<Add library="boost_system" />
+			<Add library="libCEGUIBase-0" />
+			<Add library="libCEGUIOgreRenderer-0" />
+			<Add library="libCEGUILuaScriptModule-0" />
 			<Add directory="/bin/Debug" />
 			<Add directory="/bin/Release" />
 		</Linker>
+		<Unit filename="GUI/layouts/BattleShips.layout" />
+		<Unit filename="GUI/lua_scripts/BattleShips.lua" />
+		<Unit filename="Game/Core.cpp" />
+		<Unit filename="Game/Core.hpp" />
 		<Unit filename="Game/options.cpp" />
 		<Unit filename="Game/options.hpp" />
-		<Unit filename="Graphics/Application.cpp" />
-		<Unit filename="Graphics/Application.h" />
-		<Unit filename="Graphics/BaseApplication.cpp" />
-		<Unit filename="Graphics/BaseApplication.h" />
+		<Unit filename="Graphics/CEGUI.cpp" />
+		<Unit filename="Graphics/CEGUI.hpp" />
+		<Unit filename="Graphics/Ogre.cpp" />
+		<Unit filename="Graphics/Ogre.hpp" />
 		<Unit filename="Network/BattleShipHTTP.cpp" />
 		<Unit filename="Network/BattleShipHTTP.hpp" />
 		<Unit filename="Network/BattleShipUDP.cpp" />

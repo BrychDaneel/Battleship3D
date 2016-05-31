@@ -18,6 +18,10 @@ string Page_Set="/BattleShips/Set.php";
 string Page_Attack="/BattleShips/Attack.php";
 string Page_Say="/BattleShips/Say.php";
 
+
+string OgreResourcesCfg = "resources.cfg";
+string OgrePluginsCfg = "plugins.cfg";
+
 void InitOptions(){
     srand(time(NULL));
     ClientID=rand();

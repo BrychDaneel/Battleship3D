@@ -2,16 +2,17 @@
 
 #include <boost/asio.hpp>
 #include <thread>
-#include <mutex>
 
 using std::string;
 using std::thread;
-using std::mutex;
 
 
 static boost::asio::io_service io_service;
 
 namespace BattleShipUDP{
+
+std::mutex Mutex;
+
 static void startServ(){
     io_service.run();
 }
@@ -86,10 +87,9 @@ void UDPServer::send(const unsigned short port, const string message){
             //do_send(bytes_recvd);
             data_[bytes_recvd]=0;
             if (onGet){
-           // mutex m;
-           // m.lock();
+            Mutex.lock();
                 (*onGet)(data_,bytes_recvd,sender_endpoint_.address().to_string(),sender_endpoint_.port());
-        //  m.unlock();
+            Mutex.unlock();
 
             }
           }

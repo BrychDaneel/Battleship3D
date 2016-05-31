@@ -67,7 +67,7 @@ fragment_program GLSL/OceanFS glsl
 	default_params
 	{
 		param_named Noise int 0
-		param_named skyBox int 1
+		param_named skyBox int 0.4
 	}
 }
 
