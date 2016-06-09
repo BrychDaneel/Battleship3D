@@ -32,6 +32,7 @@ material smoke_w
             scene_blend alpha_blend
             depth_write off
             diffuse vertexcolor
+            diffuse 1 1 1 0
             texture_unit
             {
                 texture smoke_w.png

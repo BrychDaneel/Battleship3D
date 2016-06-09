@@ -46,6 +46,7 @@
 			<Add library="libCEGUIBase-0" />
 			<Add library="libCEGUIOgreRenderer-0" />
 			<Add library="libCEGUILuaScriptModule-0" />
+			<Add library="Libs/fmod/libfmod.so" />
 			<Add directory="/bin/Debug" />
 			<Add directory="/bin/Release" />
 		</Linker>
@@ -59,6 +60,8 @@
 		<Unit filename="Graphics/CEGUI.hpp" />
 		<Unit filename="Graphics/Ogre.cpp" />
 		<Unit filename="Graphics/Ogre.hpp" />
+		<Unit filename="Music/Music.cpp" />
+		<Unit filename="Music/Music.hpp" />
 		<Unit filename="Network/BattleShipHTTP.cpp" />
 		<Unit filename="Network/BattleShipHTTP.hpp" />
 		<Unit filename="Network/BattleShipUDP.cpp" />

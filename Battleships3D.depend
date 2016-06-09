@@ -8278,11 +8278,12 @@
 1462382425 source:/home/daneel/Battleships3D/Graphics/BaseApplication.cpp
 	"BaseApplication.h"
 
-1463303588 source:/home/daneel/Battleships3D/main.cpp
+1464817116 source:/home/daneel/Battleships3D/main.cpp
 	"Game/options.hpp"
 	"Network/BattleShipUDP.hpp"
 	"Graphics/Ogre.hpp"
 	"Game/Core.hpp"
+	"Music/Music.hpp"
 	"windows.h"
 
 1459261164 source:/home/daneel/Battleships3D/Network/network.cpp
@@ -13281,7 +13282,7 @@
 1463239898 /home/daneel/Battleships3D/Game/options.hpp
 	<string>
 
-1464672782 source:/home/daneel/Battleships3D/Game/Core.cpp
+1464825342 source:/home/daneel/Battleships3D/Game/Core.cpp
 	"../Graphics/CEGUI.hpp"
 	"../Graphics/Ogre.hpp"
 	"Core.hpp"
@@ -13289,8 +13290,9 @@
 	<sstream>
 	"options.hpp"
 	<stdlib.h>
+	"../Music/Music.hpp"
 
-1463584667 source:/home/daneel/Battleships3D/Graphics/CEGUI.cpp
+1464819293 source:/home/daneel/Battleships3D/Graphics/CEGUI.cpp
 	"CEGUI.hpp"
 	"Ogre.hpp"
 	"../Game/Core.hpp"
@@ -14449,7 +14451,8 @@
 	"../Game/options.hpp"
 	"../Game/Core.hpp"
 
-1464638990 /home/daneel/Battleships3D/Game/Core.hpp
+1464819350 /home/daneel/Battleships3D/Game/Core.hpp
+	<CEGUI/CEGUI.h>
 
 1461435509 /home/daneel/cegui-0.8.7/cegui/include/CEGUI/ScriptModules/Lua/ScriptModule.h
 	"CEGUI/ScriptModule.h"
@@ -14469,4 +14472,32 @@
 	"OgreD3D11Plugin.h"
 	"OgrePCZPlugin.h"
 	"OgreOctreeZonePlugin.h"
+
+1464820636 /home/daneel/Battleships3D/Music/Music.hpp
+
+1464820597 source:/home/daneel/Battleships3D/Music/Music.cpp
+	"Music.hpp"
+	"../Libs/fmod/inc/fmod.hpp"
+	<stdlib.h>
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod.hpp
+	"fmod_common.h"
+	"fmod.h"
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod_common.h
+	"fmod_codec.h"
+	"fmod_dsp.h"
+	"fmod_output.h"
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod_codec.h
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod_dsp.h
+	"fmod_dsp_effects.h"
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod_dsp_effects.h
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod_output.h
+
+1464191299 /home/daneel/Battleships3D/Libs/fmod/inc/fmod.h
+	"fmod_common.h"
 

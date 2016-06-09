@@ -2,6 +2,7 @@
 #include "Network/BattleShipUDP.hpp"
 #include "Graphics/Ogre.hpp"
 #include "Game/Core.hpp"
+#include "Music/Music.hpp"
 
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
@@ -14,6 +15,7 @@ int main(int argc, char **argv)
 {
     BattleShipOptions::InitOptions();
     BattleShipUDP::initUdpProtocol(onFoundServer,onConnect,onConnected,onDisConnect,onInvalid,onRefuse,onSet,onAttack,onChatIn);
+    BattleShipsMusic::Init();
 
     try
     {

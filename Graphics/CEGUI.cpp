@@ -34,6 +34,9 @@ bool TEvents::keyPressed( const OIS::KeyEvent &arg ){
     if (arg.key==OIS::KC_ESCAPE)
         mShutDown=true;
 
+    if (arg.key==OIS::KC_RETURN)
+        EnterPressed();
+
     CEGUI::GUIContext& context = CEGUI::System::getSingleton().getDefaultGUIContext();
     context.injectKeyDown((CEGUI::Key::Scan)arg.key);
     context.injectChar((CEGUI::Key::Scan)arg.text);
@@ -78,7 +81,10 @@ bool TEvents::mouseMoved( const OIS::MouseEvent &arg ){
 
 bool TEvents::mousePressed( const OIS::MouseEvent &arg, OIS::MouseButtonID id ){
     CEGUI::System::getSingleton().getDefaultGUIContext().injectMouseButtonDown(convertButton(id));
-    OnMouseClick();
+    if (id==OIS::MB_Right)
+        OnRightMouseClick();
+    else
+        OnLeftMouseClick();
     return true;
 }
 
